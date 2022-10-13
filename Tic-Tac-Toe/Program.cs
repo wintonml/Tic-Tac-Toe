@@ -48,7 +48,7 @@ namespace TIC_TAC_TOE
                 //If there is any possition where user want to run
                 //and that is already marked then show message and load board again
                 {
-                    Console.WriteLine("Sorry the row {0} is already marked with {1}", choice, arr[choice]);
+                    Console.WriteLine($"Sorry the row {choice} is already marked with {arr[choice]}");
                     Console.WriteLine("\n");
                     Console.WriteLine("Please wait 2 second board is loading again.....");
                     Thread.Sleep(2000);
@@ -64,7 +64,7 @@ namespace TIC_TAC_TOE
             // if flag value is 1 then someone has win or
             //means who played marked last time which has win
             {
-                Console.WriteLine("Player {0} has won", (player % 2) + 1);
+                Console.WriteLine($"Player {(player % 2) + 1} has won");
             }
             else// if flag value is -1 the match will be draw and no one is winner
             {
@@ -76,13 +76,13 @@ namespace TIC_TAC_TOE
         private static void Board()
         {
             Console.WriteLine("     |     |      ");
-            Console.WriteLine("  {0}  |  {1}  |  {2}", arr[1], arr[2], arr[3]);
+            Console.WriteLine($"  {arr[1]}  |  {arr[2]}  |  {arr[3]}");
             Console.WriteLine("_____|_____|_____ ");
             Console.WriteLine("     |     |      ");
-            Console.WriteLine("  {0}  |  {1}  |  {2}", arr[4], arr[5], arr[6]);
+            Console.WriteLine($"  {arr[4]}  |  {arr[5]}  |  {arr[6]}");
             Console.WriteLine("_____|_____|_____ ");
             Console.WriteLine("     |     |      ");
-            Console.WriteLine("  {0}  |  {1}  |  {2}", arr[7], arr[8], arr[9]);
+            Console.WriteLine($"  {arr[7]}  |  {arr[8]}  |  {arr[9]}");
             Console.WriteLine("     |     |      ");
         }
         //Checking that any player has won or not
@@ -100,7 +100,7 @@ namespace TIC_TAC_TOE
                 return 1;
             }
             //Winning Condition For Third Row
-            else if (arr[6] == arr[7] && arr[7] == arr[8])
+            else if (arr[7] == arr[8] && arr[8] == arr[9])
             {
                 return 1;
             }
